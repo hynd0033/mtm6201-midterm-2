@@ -13,12 +13,14 @@
 <header>
     <div class="container">
         <ul class="nav">
-            <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
-            <li><h1>Macdonuts</h1></li>
-            <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>
-            <li class="nav-words"><a href="home.html">Home</a></li>
-            <li class="nav-words"><a href="about.html">About Us</a></li>
-            <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+            <div class="mobile-flex">
+                <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
+                <li><h1>Macdonuts</h1></li>
+                <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>         
+                <li class="nav-words"><a href="home.html">Home</a></li>
+                <li class="nav-words"><a href="about.html">About Us</a></li>
+                <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+            </div>
         </ul>
     </div>
 </header>
@@ -26,38 +28,60 @@
 <body>
     <!-- LARGE LOGO SECTION -->
     <div class="container">
-        <img src="images/macdonuts_biglogo-06-02.png" alt="large Macdonuts logo">
-        <h2>Welcome to Macdonuts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh
-            euismod tincidunt ut laoreet dolore magna
-            </p>
+        <picture>
+            <source srcset="images/macdonuts_biglogo-06-02.png"
+            media="(min-width: 1199px)">
+
+            <img class="big-logo" src="images/macdonuts_biglogo-06-02-201_x_192.png" alt="large Macdonuts logo">
+            <h2 class="welcome">Welcome to Macdonuts!</h2>
+            <p class="welcome-p">Lorem ipsum dolor sit amet, consectetuer <br>
+                adipiscing elit, sed diam nonummy nibh <br>
+                euismod tincidunt ut laoreet dolore magna
+                </p>
+        </picture>
     </div>
 
-    <!-- GALLERY SECTION -->
+    <!-- PRODUCTS SECTION -->
     <div class="container">
-        <img src="images/orange-donuts.png" alt="orange donuts">
-        <img src="images/yellow_black-donuts.png" alt="yellow and black sprinkled donuts">
-        <img src="images/isolated-donuts-1323157.png" alt="brown and white powder donuts">
-        <img src="images/pink-donuts.png" alt="pink donuts with multi-colored sprinkles">
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh</p>
+        <div class="product-grid">
+            <picture>
+                <source srcset="images/orange-donuts.png"
+                media="(min-width: 1199px)">
+
+                <img src="images/orange-donuts_mobile.png" alt="orange donuts">
+                <p>Lorem ipsum dolor sit amet, <br>
+                    consectetuer adipiscing elit, <br>
+                    sed diam nonummy nibh</p>
+            </picture>
+                
+        
+                    <img src="images/yellow_black-donuts.png" alt="yellow and black sprinkled donuts">
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+                
+                    <img src="images/isolated-donuts-1323157.png" alt="brown and white powder donuts">
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+                
+                    <img src="images/pink-donuts.png" alt="pink donuts with multi-colored sprinkles">
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+        </div>
     </div>
 </body>
 
 <footer>
-    <ul>
-        <li class="footer-title">Follow Us on - </li>
-        <li>Twitter!</li>
-        <li>Instagram!</li>
-        <li>Youtube!</li>
-    </ul>
+    <div class="container">
+        <ul class="footer-list">
+            <li class="footer-title">Follow us on - </li>
+            <li class="social">Twitter!</li>
+            <li class="social">Instagram!</li>
+            <li class="social">Youtube!</li>
+        </ul>
+    </div>
 </footer>
 
 </html>
