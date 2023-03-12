@@ -168,10 +168,27 @@ a {
 	margin-bottom: 2rem;
 }
 
+.product-grid p {
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+}
+
 .product-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr; 
+	justify-content: space-around;
+	grid-template-columns: repeat (2, 1fr);
+	grid-template-rows: repeat (4, 1fr);
+	grid-template-areas: 
+	"a b"
+	"c d"
+	;
 }
+
+.product-grid .grid-item:nth-child(1) {grid-area: a;}
+.product-grid .grid-item:nth-child(2) {grid-area: b;}
+.product-grid .grid-item:nth-child(3) {grid-area: c;}
+.product-grid .grid-item:nth-child(4) {grid-area: d;}
+
 /* --- ABOUT US PAGE --- */
 
 .hometown {
