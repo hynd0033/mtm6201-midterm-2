@@ -53,13 +53,18 @@ table {
 
 /* --- GENERAL STYLES --- */
 
+/* --- min-height: 100vh, display:flex and flex-direction is to help keep footer against the bottom of the page at all times --- */ 
+
 body {
 	background-color: #F081B4;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 header {
 	background-color: #5DD6F4;
-	min-height: 97px;
+	max-height: 97px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: gray;
@@ -83,28 +88,32 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 28px;
     font-style: italic;
+	margin-top: 1rem;
 }
 
-p {
+p, footer, .submit-btn {
 	line-height: 120%;
-}
-
-
-/* --- FOOTER SECTION ---*/
-p, footer {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size: 22px;
 }
 
+/* --- MOBILE STYLES --- */
+
+
+/* --- FOOTER SECTION ---*/
+
+
 footer {
     position: relative;
-    margin-bottom: 0px;
+    margin-top: auto;
 }
 
 .footer-title {
 	font-weight: bold;
 	display: inline;
 }
+
+/* --- Gives some space between the social media names --- */
 
 .social {
 	display: inline;
@@ -127,7 +136,7 @@ a {
 	color: black;
 }
 
-.mobile-flex {
+.nav-flex {
 	display: flex;
 	justify-content: space-between;
 }
@@ -158,6 +167,34 @@ a {
 	margin-bottom: 20px;
 }
 
+/* --- An animation for viewers to enlarge and inspect the logo --- */
+
+.big-logo:active {
+	animation-name: active;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+	animation-duration: 15s;
+	animation-delay: 0s;
+}
+
+/* --- The duration is set high and the animation finishes at 10% but they can view it with out the animation ending,
+I asume there is a better way, where the animation finishes once released, but this is what I did for the moment --- */
+
+@keyframes active {
+	0% {
+		transform: translateY(0px) scale(1) ;
+	}
+
+	10% {
+		transform: translateY(200px) scale(2);
+	}
+
+	100% {
+		transform: translateY(200px) scale(2);
+	}
+}
+
 .welcome, h2 {
 	text-align: center;
 }
@@ -177,7 +214,7 @@ a {
 	display: grid;
 	justify-content: space-around;
 	grid-template-columns: repeat (2, 1fr);
-	grid-template-rows: repeat (4, 1fr);
+	grid-template-rows: repeat (2, 1fr);
 	grid-template-areas: 
 	"a b"
 	"c d"
@@ -195,9 +232,179 @@ a {
 	max-height: 250px;
 	width: 100%;
 	background-color: white;
+	position: relative;
+}
+
+ /* --- Add extra media queries just for the text 
+				This one is for 740px   --- */
+
+.centered-text {
+	position: absolute;
+	top: 12%;
+	left: 26%;
+	text-align: center;
+}
+
+.staff {
+	margin-top: 10px;
+}
+
+.staff_image-flex, .staff_name-flex, .staff_title-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.event-flex {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 60px;
+}
+
+i {
+	font-size: 2rem;
+	margin-top: 5rem;
+}
+
+/* --- CONTACT US PAGE */
+
+form {
+	margin-left: 2rem;
 }
 
 textarea {
-	width: 608px;
+	width: 95%;
 	height: 198px;
+	resize: none;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 22px;
 }
+
+#message {
+	padding: 10px;
+}
+.contact-input label {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.contact-input input {
+	width: 282px;
+	height: 45px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.submit-btn {
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	border-radius: 18px;
+	width: 190px;
+	height: 50px;
+	font-weight: bold;
+	float: right;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-right: 1rem;
+}
+
+.contact-flex {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 132px;
+	margin-top: 22px;
+}
+
+.phone-p {
+	padding-left: 2rem;
+}
+
+.address-p {
+	padding-left: 1rem;
+}
+
+/* --- DESKTOP STYLES: ABOVE 1200px --- */
+@media screen and (min-width: 1200px) {
+
+.container {
+	width: 1200px;
+}
+
+/* --- NAV STYLES --- */
+
+header 
+
+.nav-lines {
+	display: none;
+}
+
+.nav-words {
+	display:inline;
+	padding-top: 3rem;
+	padding-bottom: 22px;
+}
+
+h1 {
+	padding-right: 25px;
+	margin-top: 42px;
+}
+
+/* --- HOME PAGE --- */ 
+/* --- PRODUCTS --- */
+
+.product-grid {
+	display: flex;
+}
+
+/* --- ABOUT US PAGE --- */ 
+
+.event-flex-container {
+	max-width: 440px;
+	margin: 0 auto;
+}
+
+.centered-text {
+	position: absolute;
+	top: 12%;
+	left: 38%;
+	text-align: center;
+}
+
+/* --- CONTACT PAGE --- */
+
+textarea {
+	max-width: 608px;
+}
+
+textarea, .contact-input {
+	margin-left: 250px;
+}
+
+.submit-btn {
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	border-radius: 18px;
+	width: 190px;
+	height: 50px;
+	font-weight: bold;
+	margin-left: 700px;
+	margin-top: 6px;
+	display: block;
+	float: none;
+}
+
+.contact-flex {
+	justify-content: space-evenly;
+}
+
+}
+
+

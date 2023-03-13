@@ -13,12 +13,14 @@
 <header>
     <div class="container">
         <ul class="nav">
-            <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
-            <li><h1>Macdonuts</h1></li>
-            <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>
-            <li class="nav-words"><a href="home.html">Home</a></li>
-            <li class="nav-words"><a href="about.html">About Us</a></li>
-            <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+            <div class="nav-flex">
+                <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
+                <li><h1>Macdonuts</h1></li>
+                <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>         
+                <li class="nav-words"><a href="home.html">Home</a></li>
+                <li class="nav-words"><a href="about.html">About Us</a></li>
+                <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+            </div>
         </ul>
     </div>
 </header>
@@ -28,32 +30,60 @@
     <div class="container">
         <h2>Contact Form</h2>
         <form action="/action_page.php">
-            <label for="name">Full name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email"><br><br>
-            <textarea id="message" name="message">Please enter your message here and we will get back to you as soon as possible! </textarea>
-            <input type="submit" value="Click to Send!">
-          </form> 
+            <div class="contact-input">
+                <label for="name">Full name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br><br>
+            </div>
+                <textarea id="message" name="message">Please enter your message here and we will get back to you as soon as possible! </textarea>
+                <input class="submit-btn" button type="button" value="Click to Send!">
+                <!-- Removing type="submit" and adding button type stops a click from sending you away from the page -->
+        </form> 
     </div>
 
     <!-- OTHER WAYS SECTION -->
+    <!-- Adds contact options in a flex container to layout pictures and words horizontally across page, and have layout change afer 1200px -->
     <div class="container">
         <h2>Other ways to reach us</h2>
-        <img src="images/mail-1237360.png" alt="email logo">
-        <img src="images/phone-receiver-1236282.png" alt="phone logo">
-        <img src="images/front-red-mail-box-1412464.png" alt="mailbox logo">
+
+        <div class="contact-flex">
+            <picture>
+                <source srcset="images/mail-1237360.png"
+                media="(min-width: 1199px)">
+                <img src="images/mail-1237360-182_x_137.png" alt="email logo">
+                <p class="email-p">Macdonuts@email.com</p>
+            </picture>
+
+            <picture>
+                <source srcset="images/phone-receiver-1236282.png"
+                media="(min-width: 1199px)">
+                <img src="images/phone-receiver-1236282-182_x_137.png" alt="phone logo">
+                <p class="phone-p">(484) 703-6346</p>
+            </picture>
+
+            <picture>
+                <source srcset="images/front-red-mail-box-1412464.png"
+                media="(min-width: 1199px)">
+                <img src="images/front-red-mail-box-1412464-182_x_137.png" alt="mailbox logo">
+                <p class="address-p">3596 Owine Lane</p>
+            </picture>
+        </div>
+
     </div>
 
 </body>
 
+<!-- FOOTER SECTION -->
+<!-- Add links to social media -->
+
 <footer>
     <div class="container">
-        <ul>
+        <ul class="footer-list">
             <li class="footer-title">Follow us on - </li>
-            <li>Twitter!</li>
-            <li>Instagram!</li>
-            <li>Youtube!</li>
+            <li class="social">Twitter!</li>
+            <li class="social">Instagram!</li>
+            <li class="social">Youtube!</li>
         </ul>
     </div>
 </footer>
