@@ -8,90 +8,116 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<!-- NAVIGATION --->
+<!-- NAVIGATION -->
 <!-- Try keep logo and h1 seperate from list if list doesn't work -->
-<header>
-    <div class="container">
-        <ul class="nav">
-            <div class="nav-flex">
-                <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
-                <li><h1>Macdonuts</h1></li>
-                <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>         
-                <li class="nav-words"><a href="home.html">Home</a></li>
-                <li class="nav-words"><a href="about.html">About Us</a></li>
-                <li class="nav-words"><a href="contact-us.html">Contact</a></li>
-            </div>
-        </ul>
-    </div>
-</header>
 
 <body>
+
+<header role="banner">
+
+        <div class="container">
+
+            <!-- Skip links are functional but don't go far due to the page being short -->
+
+                <div class="skip">
+                  <a href="#skip-main">Skip to Content</a>
+                  <a href="#skip-nav">Return to Top</a>
+                </div>
+
+                 <ul class="nav-flex">
+                    <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
+                    <li><h1 role="heading" id="skip-nav">Macdonuts</h1></li>
+                    <li class="nav-lines"><img src="images/Icon_open-list.png" alt="nav list"></li>         
+                    <li class="nav-words"><a href="home.html">Home</a></li>
+                    <li class="nav-words"><a href="about.html">About Us</a></li>
+                    <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+                </ul>
+
+        </div>
+</header>
+
+<main role="main" id="skip-main">
+
     <!-- LARGE LOGO SECTION -->
+
     <div class="container">
         <picture>
             <source srcset="images/macdonuts_biglogo-06-02.png"
             media="(min-width: 1199px)">
             
             <img class="big-logo" src="images/macdonuts_biglogo-06-02-201_x_192.png" alt="large Macdonuts logo">
-            <h2 class="welcome">Welcome to Macdonuts!</h2>
-            <p class="welcome-p">Lorem ipsum dolor sit amet, consectetuer <br>
-                adipiscing elit, sed diam nonummy nibh <br>
-                euismod tincidunt ut laoreet dolore magna
-                </p>
         </picture>
+
+        <h2 class="welcome">Welcome to Macdonuts!</h2>
+        <p class="welcome-p">Lorem ipsum dolor sit amet, consectetuer <br>
+            adipiscing elit, sed diam nonummy nibh <br>
+            euismod tincidunt ut laoreet dolore magna
+            </p>
+
     </div>
 
     <!-- PRODUCTS SECTION -->
     <!-- Picture tag added to change image size at 1200px -->
+
     <div class="container">
         <div class="product-grid">
-            <picture>
-                <source srcset="images/orange-donuts.png"
-                media="(min-width: 1199px)">
 
-                <img class="grid-item" src="images/orange-donuts_mobile.png" alt="orange donuts">
-                <p>Lorem ipsum dolor sit amet, <br>
-                    consectetuer adipiscing elit, <br>
-                    sed diam nonummy nibh</p>
-            </picture>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="images/orange-donuts.png"
+                    media="(min-width: 1199px)">
 
-            <picture>
-                <source srcset="images/yellow_black-donuts.png"
-                media="(min-width: 1199px)">
+                    <img src="images/orange-donuts_mobile.png" alt="orange donuts">
+                </picture>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+            </div>
+                
+            <div class="grid-item">
+                <picture>
+                    <source srcset="images/yellow_black-donuts.png"
+                    media="(min-width: 1199px)">
 
-                <img class="grid-item" src="images/yellow-black-donuts_mobile.png" alt="yellow and black donuts">
-                <p>Lorem ipsum dolor sit amet, <br>
-                    consectetuer adipiscing elit, <br>
-                    sed diam nonummy nibh</p>
-            </picture>
+                    <img src="images/yellow-black-donuts_mobile.png" alt="yellow and black donuts">
+                </picture>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+            </div>
 
-            <picture>
-                <source srcset="images/isolated-donuts-1323157.png"
-                media="(min-width: 1199px)">
+            <div class="grid-item">
+                <picture>
+                    <source srcset="images/isolated-donuts-1323157.png"
+                    media="(min-width: 1199px)">
 
-                <img class="grid-item" src="images/isolated_donuts-mobile.png" alt="brown donuts with white sugar">
-                <p>Lorem ipsum dolor sit amet, <br>
-                    consectetuer adipiscing elit, <br>
-                    sed diam nonummy nibh</p>
-            </picture>
+                    <img src="images/isolated_donuts-mobile.png" alt="brown donuts with white sugar">
+                </picture>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+            </div>
+            
+            <div class="grid-item">
+                <picture>
+                    <source srcset="images/pink-donuts.png"
+                    media="(min-width: 1199px)">
 
-            <picture>
-                <source srcset="images/pink-donuts.png"
-                media="(min-width: 1199px)">
-
-                <img class="grid-item" src="images/pink-donuts_mobile.png" alt="pink donuts with sprinkles donuts">
-                <p>Lorem ipsum dolor sit amet, <br>
-                    consectetuer adipiscing elit, <br>
-                    sed diam nonummy nibh</p>
-            </picture>      
+                    <img src="images/pink-donuts_mobile.png" alt="pink donuts with sprinkles donuts">
+                </picture>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit, <br>
+                        sed diam nonummy nibh</p>
+            </div>
         </div>
     </div>
-</body>
+</main>
 
 <!-- FOOTER SECTION -->
 <!-- Add links to social media -->
 
-<footer>
+<footer role="contentinfo">
+    
     <div class="container">
         <ul class="footer-list">
             <li class="footer-title">Follow us on - </li>
@@ -101,5 +127,7 @@
         </ul>
     </div>
 </footer>
+
+</body>
 
 </html>

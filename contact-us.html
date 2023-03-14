@@ -10,22 +10,31 @@
 
 <!-- NAVIGATION -->
 <!-- Try keep logo and h1 seperate from list if list doesn't work -->
-<header>
-    <div class="container">
-        <ul class="nav">
-            <div class="nav-flex">
-                <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
-                <li><h1>Macdonuts</h1></li>
-                <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>         
-                <li class="nav-words"><a href="home.html">Home</a></li>
-                <li class="nav-words"><a href="about.html">About Us</a></li>
-                <li class="nav-words"><a href="contact-us.html">Contact</a></li>
-            </div>
-        </ul>
-    </div>
-</header>
 
 <body>
+
+<header role="banner">
+    <div class="container">
+
+
+        <div class="skip">
+            <a href="#skip-main">Skip to Content</a>
+            <a href="#skip-nav">Return to Top</a>
+          </div>
+
+           <ul class="nav-flex">
+              <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
+              <li><h1 role="heading" id="skip-nav">Macdonuts</h1></li>
+              <li class="nav-lines"><img src="images/Icon_open-list.png" alt="nav list"></li>         
+              <li class="nav-words"><a href="home.html">Home</a></li>
+              <li class="nav-words"><a href="about.html">About Us</a></li>
+              <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+          </ul>
+
+  </div>
+</header>
+
+<main role="main" id="skip-main">
     <!-- CONACT FORM -->
     <div class="container">
         <h2>Contact Form</h2>
@@ -37,8 +46,8 @@
                 <input type="text" id="email" name="email"><br><br>
             </div>
                 <textarea id="message" name="message">Please enter your message here and we will get back to you as soon as possible! </textarea>
-                <input class="submit-btn" button type="button" value="Click to Send!">
-                <!-- Removing type="submit" and adding button type stops a click from sending you away from the page -->
+                <input class="submit-btn" type="submit" value="Click to Send!">
+                
         </form> 
     </div>
 
@@ -48,36 +57,45 @@
         <h2>Other ways to reach us</h2>
 
         <div class="contact-flex">
-            <picture>
-                <source srcset="images/mail-1237360.png"
-                media="(min-width: 1199px)">
-                <img src="images/mail-1237360-182_x_137.png" alt="email logo">
-                <p class="email-p">Macdonuts@email.com</p>
-            </picture>
 
-            <picture>
-                <source srcset="images/phone-receiver-1236282.png"
-                media="(min-width: 1199px)">
-                <img src="images/phone-receiver-1236282-182_x_137.png" alt="phone logo">
-                <p class="phone-p">(484) 703-6346</p>
-            </picture>
+            <div class="flex-item">
+                <picture>
+                    <source srcset="images/mail-1237360.png"
+                    media="(min-width: 1199px)">
+                    <img src="images/mail-1237360-182_x_137.png" alt="email logo">
+                </picture>
+                    <p class="email-p">@email.com</p>
+            </div>
 
-            <picture>
-                <source srcset="images/front-red-mail-box-1412464.png"
-                media="(min-width: 1199px)">
-                <img src="images/front-red-mail-box-1412464-182_x_137.png" alt="mailbox logo">
-                <p class="address-p">3596 Owine Lane</p>
-            </picture>
+            <div class="flex-item">
+                <picture>
+                    <source srcset="images/phone-receiver-1236282.png"
+                    media="(min-width: 1199px)">
+                    <img src="images/phone-receiver-1236282-182_x_137.png" alt="phone logo">
+                </picture>
+                    <p class="phone-p">(484) 703-6346</p>
+            </div>
+
+            <div class="flex-item">
+                <picture>
+                    <source srcset="images/front-red-mail-box-1412464.png"
+                    media="(min-width: 1199px)">
+                    <img src="images/front-red-mail-box-1412464-182_x_137.png" alt="mailbox logo">
+                </picture>
+                    <p class="address-p">3596 Owine Lane</p>
+            </div>
+
         </div>
 
     </div>
 
-</body>
+</main>
 
 <!-- FOOTER SECTION -->
 <!-- Add links to social media -->
 
-<footer>
+<footer role="contentinfo">
+
     <div class="container">
         <ul class="footer-list">
             <li class="footer-title">Follow us on - </li>
@@ -87,5 +105,7 @@
         </ul>
     </div>
 </footer>
+
+</body>
 
 </html>

@@ -53,7 +53,9 @@ table {
 
 /* --- GENERAL STYLES --- */
 
-/* --- min-height: 100vh, display:flex and flex-direction is to help keep footer against the bottom of the page at all times --- */ 
+/* --- min-height: 100vh, display:flex and flex-direction is to help keep footer 
+against the bottom of the page at all times, this code was sourced 
+from https://www.30secondsofcode.org/articles/s/css-footer-at-the-bottom --- */ 
 
 body {
 	background-color: #F081B4;
@@ -97,8 +99,42 @@ p, footer, .submit-btn {
 	font-size: 22px;
 }
 
-/* --- MOBILE STYLES --- */
+/* --- TABLET STYLES --- */
 
+/* --- NAVIGATION --- */
+
+/* --- Add actions to links --- */
+.nav-flex {
+	opacity: 1;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a {
+	color: black;
+}
+
+.logo {
+	margin-top: 10px;
+}
+
+.nav-lines {
+	margin-top: 22px;
+	position: relative;
+	display: inline-block;
+}
+
+/* --- This hides the navigation words, which should appear for desktop sizes --- */
+.nav-words {
+	display: none;
+}
 
 /* --- FOOTER SECTION ---*/
 
@@ -120,42 +156,21 @@ footer {
 	padding: 0 2rem 0 2rem;
 }
 
-/* --- NAVIGATION --- */
-.nav {
-	opacity: 1;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 32px;
-}
-
-a:link {
-	text-decoration: none;
-}
-
-a {
+.skip {
+	width: 70%;
+	position: absolute;
+	background-color: red;
 	color: black;
-}
-
-.nav-flex {
-	display: flex;
-	justify-content: space-between;
-}
-
-
-.logo {
-	margin-top: 10px;
-}
-
-.nav-lines {
-	margin-top: 22px;
+	top: -4em;
+  }
+  
+  .skip a:focus {
+	top: 4em;
 	position: relative;
-	display: inline-block;
-}
-
-/* --- This hides the navigation words, which should appear for desktop sizes --- */
-.nav-words {
-	display: none;
-}
+	background-color: greenyellow;
+	color: black;
+	width: 70%;
+  }
 
 /* --- HOME PAGE -- */
 
@@ -171,23 +186,24 @@ a {
 
 .big-logo:active {
 	animation-name: active;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in;
-	animation-duration: 15s;
+	animation-duration: 2s;
 	animation-delay: 0s;
 }
 
 /* --- The duration is set high and the animation finishes at 10% but they can view it with out the animation ending,
-I asume there is a better way, where the animation finishes once released, but this is what I did for the moment --- */
+I asume there is a better way, where the animation finishes once released, but this is what I did for the moment. 
+I figured out that changning the iteration count from infinite to 1 fixes this issue --- */
 
 @keyframes active {
 	0% {
 		transform: translateY(0px) scale(1) ;
 	}
 
-	10% {
-		transform: translateY(200px) scale(2);
+	50% {
+		transform: translateY(175px) scale(1.7);
 	}
 
 	100% {
@@ -210,11 +226,17 @@ I asume there is a better way, where the animation finishes once released, but t
 	padding-bottom: 3rem;
 }
 
+.grid-item img:hover {
+	transition: 0.5s;
+	transform: scale(1.2);
+}
+
 .product-grid {
 	display: grid;
-	justify-content: space-around;
-	grid-template-columns: repeat (2, 1fr);
-	grid-template-rows: repeat (2, 1fr);
+	margin-left: 80px;
+	justify-content: space-evenly;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	grid-template-areas: 
 	"a b"
 	"c d"
@@ -301,6 +323,8 @@ textarea {
 	margin-bottom: 1rem;
 }
 
+/* --- Add animation to submit btn when clicked --- */
+
 .submit-btn {
 	border-style: solid;
 	border-width: 3px;
@@ -317,13 +341,16 @@ textarea {
 
 .contact-flex {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 132px;
-	margin-top: 22px;
+	justify-content: space-evenly;
+	margin-bottom: 32px;
+	margin-top: 40px;
 }
 
+.email-p {
+	text-align: center;
+}
 .phone-p {
-	padding-left: 2rem;
+	padding-left: 1rem;
 }
 
 .address-p {
@@ -363,6 +390,9 @@ h1 {
 	display: flex;
 }
 
+.product-grid {
+	margin-left: 0;
+}
 /* --- ABOUT US PAGE --- */ 
 
 .event-flex-container {

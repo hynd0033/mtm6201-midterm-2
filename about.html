@@ -11,22 +11,32 @@
 
 <!-- NAVIGATION -->
 <!-- Try keep logo and h1 seperate from list if list doesn't work -->
-<header>
-    <div class="container">
-        <ul class="nav">
-            <div class="nav-flex">
-                <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
-                <li><h1>Macdonuts</h1></li>
-                <li class="nav-lines"><img src="images/Icon open-list.png" alt="nav list"></li>         
-                <li class="nav-words"><a href="home.html">Home</a></li>
-                <li class="nav-words"><a href="about.html">About Us</a></li>
-                <li class="nav-words"><a href="contact-us.html">Contact</a></li>
-            </div>
-        </ul>
-    </div>
-</header>
 
 <body>
+
+<header role="banner">
+    <div class="container">
+
+
+        <div class="skip">
+            <a href="#skip-main">Skip to Content</a>
+            <a href="#skip-nav">Return to Top</a>
+          </div>
+
+           <ul class="nav-flex">
+              <li class="logo"><img src="images/mini_logo_blue-08.png" alt="small Macdonuts logo"></li>
+              <li><h1 role="heading" id="skip-nav">Macdonuts</h1></li>
+              <li class="nav-lines"><img src="images/Icon_open-list.png" alt="nav list"></li>         
+              <li class="nav-words"><a href="home.html">Home</a></li>
+              <li class="nav-words"><a href="about.html">About Us</a></li>
+              <li class="nav-words"><a href="contact-us.html">Contact</a></li>
+          </ul>
+
+  </div>
+</header>
+
+<main role="main" id="skip-main">
+
     <!-- The image is this size on mobile, it is stretched on desktop, same size -->
     <div class="container">
         <img class="hometown" src="images/cesky-krumlov-panorama-1201676.png" alt="small village">
@@ -65,7 +75,7 @@
         <div class="event-flex-container">
             <div class="event-flex">
                 <i class="fa-solid fa-circle-left"></i>
-                <img class="carnival "src="images/carnival-mobile.png" alt="carnival">
+                <img class="carnival" src="images/carnival-mobile.png" alt="carnival">
                 <i class="fa-solid fa-circle-right"></i>
             </div>
         </div>
@@ -73,12 +83,13 @@
         <h2 class="past">Past Events</h2>
     </div>
 
-</body>
+</main>
 
 <!-- FOOTER SECTION -->
 <!-- Add links to social media -->
 
-<footer>
+<footer role="contentinfo">
+
     <div class="container">
         <ul class="footer-list">
             <li class="footer-title">Follow us on - </li>
@@ -89,5 +100,6 @@
     </div>
 </footer>
 
+</body>
 
 </html>
